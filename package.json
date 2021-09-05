@@ -1,6 +1,5 @@
 {
-    "scripts": 
-    {
+    "scripts": {
         "build": "cd frontend && npm run build",
         "install-client": "cd frontend && npm i",
         "install-server": "cd backend && npm i",
@@ -8,5 +7,8 @@
         "server": "cd backend && npm start",
         "develop": "concurrently --kill-others-on-fail \"npm run server\" \"npm run start --prefix frontend\"",
         "start": "concurrently --kill-others-on-fail \"npm run server\" \"npm run start --prefix frontend\""
+    },
+    "dependencies": {
+        "concurrently": "^6.2.1"
     }
 }
