@@ -1,0 +1,75 @@
+////////////////////////////////////////
+// SETUP frontend
+// Run terminal at main folder
+////////////////////////////////////////
+npx create-react-app frontend
+npm start
+
+////////////////////////////////////////
+// SETUP backend
+// Run terminal at backend folder
+////////////////////////////////////////
+npm init
+npm i --save-dev babel-cli babel-preset-env babel-preset-stage-0
+npm i body-parser express mongoose nodemon
+[add a file '.babelrc']
+[in 'package.json' add "type": "module"]
+[in 'package.json'>'scripts' add "start": "nodemon ./index.js -- exec babel-node -e js"]
+[setup 'index.js']
+
+////////////////////////////////////////
+// RUN backend
+// Run terminal at backend folder
+////////////////////////////////////////
+npm start
+
+////////////////////////////////////////
+// Install Cors
+// Run terminal at backend folder
+////////////////////////////////////////
+npm i cors
+
+////////////////////////////////////////
+// Use Materialize CSS
+// This is for 'index.html' 
+// in 'frontend>public'
+////////////////////////////////////////
+https://materializecss.com/getting-started.html
+
+////////////////////////////////////////
+// Install Simple React Snippets
+// This is for VS Code Extension
+// can import React faster
+////////////////////////////////////////
+Simple React Snippets
+
+////////////////////////////////////////
+// Install Axios
+// Allow calls to api 
+// with simpler syntax
+////////////////////////////////////////
+npm i axios
+
+////////////////////////////////////////
+// Install ReactRouterDom
+// Allow routing to screens
+////////////////////////////////////////
+npm i react-router-dom
+
+////////////////////////////////////////
+// Git
+// Upload to repository
+// Must add ".gitignore" for folders 
+// that you don't want to sync like
+// example "node_modules"
+////////////////////////////////////////
+git init
+git status 
+git add . 
+git status 
+git commit -m "First commit"
+clear
+
+git branch -M main
+git remote add origin https://github.com/peihwee/marketplace.git
+git push -u origin main

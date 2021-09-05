@@ -1,0 +1,29 @@
+body
+{
+  margin: 0 auto;
+}
+
+.app
+{
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+main 
+{
+  flex: 1 0 auto;
+}
+
+.page-footer
+{
+  padding: 20px;
+  margin: 0;
+}
+
+.brand-logo
+{
+  display: block;
+  padding: 30px;
+}
