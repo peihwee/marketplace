@@ -3,6 +3,7 @@
     {
         "frontend": "cd frontend && npm i && npm start",
         "backend": "cd backend && npm i && npm start",
-        "start": "concurrently \"npm run backend\" \"npm run frontend\""
+        "start": "concurrently \"npm run backend\" \"npm run frontend\"",
+        "heroku-postbuild": "npm run frontend"
     }
 }
