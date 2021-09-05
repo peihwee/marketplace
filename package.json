@@ -4,7 +4,7 @@
         "build": "cd frontend && npm run build",
         "install-client": "cd frontend && npm i",
         "install-server": "cd backend && npm i",
-        "heroku-postbuild": "concurrently \"npm run install-server\" \"npm run install-client && npm run build\"",
+        "heroku-postbuild": "concurrently \"npm run install-server\" \"npm run install-client\"",
         "server": "cd backend && npm start",
         "develop": "concurrently --kill-others-on-fail \"npm run server\" \"npm run start --prefix frontend\"",
         "start": "concurrently --kill-others-on-fail \"npm run server\" \"npm run start --prefix frontend\""
