@@ -5,7 +5,7 @@ import cors from 'cors';
 import routes from './routes/mainRoutes.js';
 
 const app = express(); 
-const PORT = 4000;
+const PORT = process.env.PORT || 4000;
 
 // mongo connection
 const uri = process.env.MONGODB_URI;
@@ -24,7 +24,7 @@ app.use(cors());
 
 routes(app);
 
-app.get('/', (req, res) => 
+app.get('/api', (req, res) => 
     res.send(`Our application is running ${PORT}`)
 );
 
