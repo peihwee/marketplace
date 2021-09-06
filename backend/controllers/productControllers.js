@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 import { ProductSchema } from '../models/productModel.js';
-
+//Update
 const Product = mongoose.model('Product', ProductSchema);
 
 export const addNewProduct = (req, res) => {
