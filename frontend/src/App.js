@@ -17,7 +17,7 @@ class App extends React.Component {
 
   
   componentDidMount() {
-    const url = '/api/products';
+    const url = 'api/products';
 
     axios.get(url)
       .then((Response) => {
