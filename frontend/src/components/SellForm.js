@@ -15,7 +15,7 @@ class SellForm extends React.Component {
         })
         .then((response) => {
             console.log(response);
-            window.open("/");
+            window.open("/", "_self");
         })
         .catch((error) => {
             console.log(error);
