@@ -24,7 +24,7 @@ app.use(cors());
 
 routes(app);
 
-app.get('/api', (req, res) => 
+app.get('/', (req, res) => 
     res.send(`Our application is running ${PORT}`)
 );
 
