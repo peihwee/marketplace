@@ -73,3 +73,13 @@ clear
 git branch -M main
 git remote add origin https://github.com/peihwee/marketplace.git
 git push -u origin main
+
+
+////////////////////////////////////////
+// Heroku Deployment
+// What to install on Main Folder
+////////////////////////////////////////
+npm i concurrently --save
+[cd frontend] npm i -S http-proxy-middleware
+[setup 'setupProxy.js']
+

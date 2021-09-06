@@ -8,8 +8,10 @@ const app = express();
 const PORT = 4000;
 
 // mongo connection
+const uri = process.env.MONGODB_URI;
+
 mongoose.Promise = global.Promise;
-mongoose.connect("mongodb://localhost/marketplaceDB", {
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/marketplaceDB", {
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
@@ -22,7 +24,7 @@ app.use(cors());
 
 routes(app);
 
-app.get('/', (req, res) => 
+app.get('/api', (req, res) => 
     res.send(`Our application is running ${PORT}`)
 );
 
