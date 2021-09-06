@@ -16,5 +16,8 @@ export const ProductSchema = new Schema({
     },
     image: {
         type: String
+    },
+    seller: {
+        type: String
     }
 });

@@ -15,8 +15,9 @@ class App extends React.Component {
     }
   }
 
+  
   componentDidMount() {
-    const url = 'http://localhost:4000/players';
+    const url = '/api/products';
 
     axios.get(url)
       .then((Response) => {
@@ -28,6 +29,7 @@ class App extends React.Component {
         console.log(error);
       })
   }
+  
   
   render () {
     return (
