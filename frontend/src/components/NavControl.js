@@ -32,7 +32,7 @@ class NavControl extends React.Component
         if (bLogin) 
         {
             objSellButton = <li><a href="/sell">Sell</a></li>
-            objLoginButton = <li><a href="/viewAcct">{bUser.name}</a></li>
+            objLoginButton = <li><a href={"/sellers/"+bUser._id}>{bUser.name}</a></li>
             objLogoutButton = <li><a href="/logout">Logout</a></li>
         } 
         else 

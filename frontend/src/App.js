@@ -9,6 +9,7 @@ import LoginScreen from './screens/LoginScreen.js';
 import NavControl from './components/NavControl.js';
 import SignUpScreen from './screens/SignUpScreen.js';
 import LogoutScreen from './screens/LogoutScreen.js';
+import SellerProductsScreen from './screens/SellerProductsScreen';
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -53,6 +54,7 @@ class App extends React.Component {
                 <Route path="/login" component={LoginScreen} exact></Route>
                 <Route path="/signup" component={SignUpScreen} exact></Route>
                 <Route path="/logout" component={LogoutScreen} exact></Route>
+                <Route path="/sellers/:id" component={SellerProductsScreen} exact></Route>
               </BrowserRouter>
             </div>
           </main>

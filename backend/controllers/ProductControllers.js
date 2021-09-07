@@ -35,6 +35,16 @@ export const getProductWithID = (req, res) => {
     });
 };
 
+export const getProductWithSellerID = (req, res) => {
+    Product.find({sellerid: req.params.sellerId}, (err, Product) => {
+        if(err)
+        {
+            res.send(err);
+        }
+        res.json(Product);
+    });
+};
+
 export const updateProduct = (req, res) => {
     Product.findOneAndUpdate({_id: req.params.productId}, req.body, {new: true}, (err, Product) => {
         if(err)

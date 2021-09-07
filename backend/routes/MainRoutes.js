@@ -4,6 +4,7 @@ import {
     getProductWithID, 
     updateProduct,
     deleteProduct,
+    getProductWithSellerID
 } from '../controllers/ProductControllers.js';
 
 import { 
@@ -29,6 +30,10 @@ const routes = (app) => {
         .put(updateProduct)
     // DELETE specific Product
         .delete(deleteProduct);
+
+    app.route('/api/products/byseller/:sellerId')
+    // GET user Product
+            .get(getProductWithSellerID);
 
     app.route('/api/users')
     // GET endpoint
