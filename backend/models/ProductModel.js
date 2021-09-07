@@ -19,5 +19,9 @@ export const ProductSchema = new Schema({
     },
     seller: {
         type: String
+    },
+    created_date: {
+        type: Date,
+        default: Date.now
     }
 });

@@ -21,7 +21,11 @@ export const UserSchema = new Schema({
     isAdmin:
     {
         type: String,
-        default: false;
+        default: false,
         required: true
+    },
+    created_date: {
+        type: Date,
+        default: Date.now
     }
 });

@@ -35,7 +35,7 @@ export const getProductWithID = (req, res) => {
     });
 };
 
-export const UpdateProduct = (req, res) => {
+export const updateProduct = (req, res) => {
     Product.findOneAndUpdate({_id: req.params.productId}, req.body, {new: true}, (err, Product) => {
         if(err)
         {
