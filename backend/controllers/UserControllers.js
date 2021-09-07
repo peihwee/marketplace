@@ -27,7 +27,10 @@ export const addNewUser = (req, res) => {
             }
             else
             {
-                res.json({message: 'This email is already in use'});
+                res.json({
+                    header: 'Error',
+                    message: 'This email is already in use'
+                });
             }
         }
     );
@@ -95,16 +98,17 @@ export const signInUser = (req, res) => {
                     });
                     return;
                 }
-                res.status(401).send({message: 'Invalid email or password'});
+                res.status(401).send({
+                    header: 'Error',
+                    message: 'Invalid email or password'
+                });
             }
             else
             {
-                res.json({message: 'No such user'});
-            }
-
-            if(err)
-            {
-                res.send(err);
+                res.json({
+                    header: 'Error',
+                    message: 'No such user'
+                });
             }
         }
     );

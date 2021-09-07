@@ -1,5 +1,8 @@
 import React from 'react';
 import axios from 'axios';
+import { ReactDOM } from 'react';
+
+import Modal from './Modal.js';
 
 class SignInForm extends React.Component {
     submitForm(event)
@@ -12,9 +15,16 @@ class SignInForm extends React.Component {
         })
         .then((response) => {
             console.log(response.data);
+            if(response.data.header == "Error")
+            {
+                
+            }
+            else
+            {
+                localStorage.setItem('user', JSON.stringify(response.data))
+                window.open("/", "_self");
+            }
             
-            localStorage.setItem('user', JSON.stringify(response.data))
-            window.open("/", "_self");
         })
         .catch((error) => {
             console.log(error);

@@ -12,8 +12,19 @@ class SignUpForm extends React.Component {
             password: event.target.password.value
         })
         .then((response) => {
+
             console.log(response);
-            window.open("/login", "_self");
+
+            if(response.data.header == "Error")
+            {
+                
+            }
+            else
+            {
+                window.open("/login", "_self");
+            }
+            
+            
         })
         .catch((error) => {
             console.log(error);
