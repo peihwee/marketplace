@@ -5,13 +5,14 @@ class SellForm extends React.Component {
     submitProduct(event)
     {
         event.preventDefault();
-
+        let bUser = JSON.parse(localStorage.getItem('user'));
         axios.post('api/products', {
-            name: this.refs.name.value,
-            description: this.refs.description.value,
-            image: this.refs.image.value,
-            price: this.refs.price.value,
-            seller: this.refs.seller.value,
+            name: event.target.name.value,
+            description: event.target.description.value,
+            image: event.target.image.value,
+            price: event.target.price.value,
+            seller: bUser.name,
+            sellerid: bUser._id,
         })
         .then((response) => {
             console.log(response);
@@ -28,25 +29,21 @@ class SellForm extends React.Component {
                 <form className="col s12" onSubmit={this.submitProduct.bind(this)}>
                 <div className="row">
                     <div className="input-field col s6">
-                        <input id="name" ref="name" type="text"/>
+                        <input id="name" type="text"/>
                         <label htmlFor="name">Name</label>
                     </div>
                     <div className="input-field col s6">
-                        <input id="description" ref="description" type="text"/>
+                        <input id="description" type="text"/>
                         <label htmlFor="description">description</label>
                     </div>
                 </div>
                 <div className="row">
-                    <div className="input-field col s4">
-                        <input id="price" ref="price" type="text"/>
+                    <div className="input-field col s6">
+                        <input id="price" type="text"/>
                         <label htmlFor="price">Price</label>
                     </div>
-                    <div className="input-field col s4">
-                        <input id="seller" ref="seller" type="text"/>
-                        <label htmlFor="seller">Seller</label>
-                    </div>
-                    <div className="input-field col s4">
-                        <input list="images-list" id="image" ref="image"/>
+                    <div className="input-field col s6">
+                        <input list="images-list" id="image"/>
                         <datalist id="images-list">
                             <option value="images/001.png"/>
                             <option value="images/004.png"/>

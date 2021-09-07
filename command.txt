@@ -83,3 +83,15 @@ npm i concurrently --save
 [cd frontend] npm i -S http-proxy-middleware
 [setup 'setupProxy.js']
 
+////////////////////////////////////////
+// Install bcrypt in [backend]
+// To use for encrypt password
+////////////////////////////////////////
+npm i bcrypt
+
+////////////////////////////////////////
+// Install Session in [backend]
+// To use for Login Sessions
+////////////////////////////////////////
+npm i express-session cookie-parser 
+npm i jsonwebtoken

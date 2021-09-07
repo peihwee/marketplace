@@ -3,13 +3,16 @@ import mongoose from 'mongoose';
 import bodyParser from 'body-parser';
 import cors from 'cors';
 import routes from './routes/MainRoutes.js';
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 const app = express(); 
 const PORT = 5000;
 
 // mongo connection
 const uri = process.env.MONGODB_URI;
-
+console.log("process.env.JWT_SECRET "+process.env.JWT_SECRET);
 mongoose.Promise = global.Promise;
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/marketplaceDB", {
     useNewUrlParser: true,

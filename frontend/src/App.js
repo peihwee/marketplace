@@ -6,13 +6,18 @@ import './App.css';
 import HomeScreen from './screens/HomeScreen.js';
 import SellScreen from './screens/SellScreen.js';
 import LoginScreen from './screens/LoginScreen.js';
-
+import NavControl from './components/NavControl.js';
+import SignUpScreen from './screens/SignUpScreen.js';
+import LogoutScreen from './screens/LogoutScreen.js';
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-
+      
     }
+
+    localStorage.getItem("user");
+    //localStorage.clear();
   }
 
   
@@ -37,10 +42,7 @@ class App extends React.Component {
           <nav>
               <div className="nav-wrapper blue darken-1">
                 <a href="/" className="brand-logo">Logo</a>
-                <ul id="nav-mobile" className="right">
-                  <li><a href="/sell">Sell</a></li>
-                  <li><a href="/login">Login</a></li>
-                </ul>
+                <NavControl isLogin={this.state.isLogin} />
               </div>
           </nav>
           <main>
@@ -49,6 +51,8 @@ class App extends React.Component {
                 <Route path="/" component={HomeScreen} exact></Route>
                 <Route path="/sell" component={SellScreen} exact></Route>
                 <Route path="/login" component={LoginScreen} exact></Route>
+                <Route path="/signup" component={SignUpScreen} exact></Route>
+                <Route path="/logout" component={LogoutScreen} exact></Route>
               </BrowserRouter>
             </div>
           </main>

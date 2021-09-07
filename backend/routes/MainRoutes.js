@@ -12,6 +12,7 @@ import {
     getUserWithID, 
     updateUser,
     deleteUser,
+    signInUser
 } from '../controllers/UserControllers.js';
 
 const routes = (app) => {
@@ -42,6 +43,10 @@ const routes = (app) => {
         .put(updateUser)
     // DELETE specific User
         .delete(deleteUser);
+
+    app.route('/api/signin')
+    // Sign In User
+        .post(signInUser);
 }
 
 export default routes;

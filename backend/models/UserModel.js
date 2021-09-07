@@ -20,7 +20,7 @@ export const UserSchema = new Schema({
     },
     isAdmin:
     {
-        type: String,
+        type: Boolean,
         default: false,
         required: true
     },
