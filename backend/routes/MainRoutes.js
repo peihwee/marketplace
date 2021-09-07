@@ -4,7 +4,7 @@ import {
     getProductWithID, 
     UpdateProduct,
     deleteProduct,
-} from '../controllers/productControllers.js';
+} from '../controllers/ProductControllers.js';
 
 const routes = (app) => {
     app.route('/api/products')
