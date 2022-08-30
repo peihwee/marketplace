@@ -1,6 +1,7 @@
 {
     "scripts": {
         "dontbuild": "cd frontend && npm run build",
+        "build": "",
         "install-client": "cd frontend && npm i",
         "install-server": "cd backend && npm i",
         "heroku-postbuild": "concurrently \"npm run install-server\" \"npm run install-client\"",
